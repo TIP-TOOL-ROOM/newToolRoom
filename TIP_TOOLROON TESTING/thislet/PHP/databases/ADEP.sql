@@ -1,6 +1,6 @@
 -- Create database for student
-create database student_db;
-use student_db;
+CREATE DATABASE student_db;
+USE student_db;
 
 CREATE TABLE student (
   `id_num` int(30) NOT NULL,
@@ -10,8 +10,8 @@ CREATE TABLE student (
   `program` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `year` int(30) NOT NULL,
-  `password`varchar(45) NOT NULL,
-  PRIMARY KEY  (`id_num`)
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_num`)
 );
 
 -- Create database for professors
@@ -27,8 +27,8 @@ CREATE TABLE professors (
   `age` int(30) NOT NULL,
   `department` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
-  `password`varchar(45) NOT NULL,
-  PRIMARY KEY  (`id_num`)
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_num`)
 );
 
 -- Create database for faculty
@@ -38,18 +38,17 @@ USE faculty_db;
 -- Create table for faculty
 CREATE TABLE faculty (
   `id_num` int(30) NOT NULL,
-  `first name` varchar(45) NOT NULL,
-  `last name` varchar(45) NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
   `address` varchar(45) NOT NULL,
   `department` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `year` int(30) NOT NULL,
-  `password`varchar(45) NOT NULL,
-  PRIMARY KEY  (`id_num`)
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_num`)
 );
 
-
--- Create the database
+-- Create the database for items
 CREATE DATABASE item_db;
 USE item_db;
 
@@ -60,5 +59,5 @@ CREATE TABLE items (
   `description` varchar(45) NOT NULL,
   `quantity` int(30) NOT NULL,
   `category` varchar(45) NOT NULL,
-  PRIMARY KEY  (`id_num`)
+  PRIMARY KEY (`id_num`)
 );

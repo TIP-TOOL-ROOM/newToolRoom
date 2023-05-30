@@ -26,16 +26,22 @@ if ($facultyConnection->connect_error) {
     die("Faculty database connection failed: " . $facultyConnection->connect_error);
 }
 
+// Connect to the faculty database
+$itemsConnection = new mysqli($hostname, $username, $password, "items_db");
+if ($itemsConnection->connect_error) {
+    die("Items database connection failed: " . $itemsConnection->connect_error);
+}
+
 // Perform operations on the databases
 
 
 
-require_once('Finsert.php')
-require_once('Pinsert.php')
-require_once('Sinsert.php')
-require_once('Fselect.php')
-require_once('Fselect.php')
-require_once('Fselect.php')
+require_once('Finsert.php');
+require_once('Pinsert.php');
+require_once('Sinsert.php');
+require_once('Fselect.php');
+require_once('Fselect.php');
+require_once('Fselect.php');
 
 
 // Close the database connections

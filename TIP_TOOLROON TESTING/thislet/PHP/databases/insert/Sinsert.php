@@ -19,6 +19,6 @@
 		
 		// Show message when user added
 		echo "User added successfully. <a href='index.php'>View Users</a>";
-	//}
+	}
 
 ?>
