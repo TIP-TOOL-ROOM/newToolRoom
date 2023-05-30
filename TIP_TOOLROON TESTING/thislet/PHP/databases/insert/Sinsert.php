@@ -18,7 +18,7 @@
 		VALUES('$id_num','$fname','lname','$address','$program','$email','$year')");
 		
 		// Show message when user added
-		echo "User added successfully. <a href='index.php'>View Users</a>";
+		echo "User added successfully. <a href='index.php'>View Users</a>"; 
 	}
 
 ?>
