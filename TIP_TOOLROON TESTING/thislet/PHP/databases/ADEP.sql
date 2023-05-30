@@ -38,8 +38,8 @@ USE faculty_db;
 -- Create table for faculty
 CREATE TABLE faculty (
   `id_num` int(30) NOT NULL,
-  `first name` varchar(45) NOT NULL,
-  `last name` varchar(45) NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
   `address` varchar(45) NOT NULL,
   `department` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
