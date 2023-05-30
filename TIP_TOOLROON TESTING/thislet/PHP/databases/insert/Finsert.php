@@ -1,8 +1,5 @@
 <?php
-// Database connection details
-$hostname = "localhost"; // Replace with your MySQL hostname
-$username = "your_username"; // Replace with your MySQL username
-$password = "your_password"; // Replace with your MySQL password
+include_once("TIP_TOOLROON TESTING\thislet\PHP\config.php")
 
 // Connect to the faculty database
 $facultyConnection = new mysqli($hostname, $username, $password, "faculty_db");
