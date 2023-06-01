@@ -1,5 +1,6 @@
 <?php
 // Check if the form is submitted
+// if this php is href change the `Submit` to the one that you place on the button
 if (isset($_POST['Submit'])) {
     // Retrieve form data
     $itemID = $_POST['itemID'];
@@ -9,6 +10,7 @@ if (isset($_POST['Submit'])) {
     $category = $_POST['category'];
     
     // Include database connection file
+    // set the correct path of the file example: TIPTOOLROOM 80% done\student\PHP\config.php
     include_once("config.php");
     
     // Insert item data into the items table
