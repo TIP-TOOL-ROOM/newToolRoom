@@ -1,22 +1,23 @@
 <?php
 // Check if the form is submitted
+// if this php is href change the `Submit` to the one that you place on the button
 if (isset($_POST['Submit'])) {
     // Retrieve form data
-    $id_num = $_POST['id_num'];
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
+    $professorsID = $_POST['professorsID'];
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
     $address = $_POST['address'];
-    $age = $_POST['age'];
     $department = $_POST['department'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     
     // Include database connection file
+    // set the correct path of the file example: TIPTOOLROOM 80% done\student\PHP\config.php
     include_once("config.php");
     
     // Insert user data into the professors table
-    $professorQuery = "INSERT INTO professors (id_num, first_name, last_name, address, age, department, email, password) 
-                       VALUES ('$id_num', '$first_name', '$last_name', '$address', '$age', '$department', '$email', '$password')";
+    $professorQuery = "INSERT INTO professors (professorsID, firstName, lastName, address, department, email, password) 
+                       VALUES ('$professorsID', '$firstName', '$lastName', '$address', '$department', '$email', '$password')";
     
     $result = $professorConnection->query($professorQuery);
     if ($result === TRUE) {

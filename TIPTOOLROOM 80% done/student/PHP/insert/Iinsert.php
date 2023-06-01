@@ -2,27 +2,24 @@
 // Check if the form is submitted
 if (isset($_POST['Submit'])) {
     // Retrieve form data
-    $id_num = $_POST['id_num'];
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $address = $_POST['address'];
-    $program = $_POST['program'];
-    $email = $_POST['email'];
-    $year = $_POST['year'];
-    $password = $_POST['password'];
+    $itemID = $_POST['itemID'];
+    $itemName = $_POST['itemName'];
+    $description = $_POST['description'];
+    $quantity = $_POST['quantity'];
+    $category = $_POST['category'];
     
     // Include database connection file
     include_once("config.php");
     
-    // Insert user data into the student table
-    $studentQuery = "INSERT INTO student (id_num, first_name, last_name, address, program, email, year, password) 
-                     VALUES ('$id_num', '$first_name', '$last_name', '$address', '$program', '$email', '$year', '$password')";
+    // Insert item data into the items table
+    $itemQuery = "INSERT INTO items (itemID, itemName, description, quantity, category) 
+                  VALUES ('$itemID', '$itemName', '$description', '$quantity', '$category')";
     
-    $result = $studentConnection->query($studentQuery);
+    $result = $itemsConnection->query($itemQuery);
     if ($result === TRUE) {
-        echo "Student added successfully.";
+        echo "Item added successfully.";
     } else {
-        echo "Error adding student.";
+        echo "Error adding item.";
     }
 
      // Close the database connection

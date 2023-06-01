@@ -3,15 +3,15 @@ CREATE DATABASE student_db;
 USE student_db;
 
 CREATE TABLE student (
-  `id_num` int(30) NOT NULL,
-  `first_name` varchar(45) NOT NULL,
-  `last_name` varchar(45) NOT NULL,
+  `studentID` int(30) NOT NULL,
+  `firstName` varchar(45) NOT NULL,
+  `lastName` varchar(45) NOT NULL,
   `address` varchar(45) NOT NULL,
   `program` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `year` int(30) NOT NULL,
   `password`varchar(45) NOT NULL,
-  PRIMARY KEY  (`id_num`)
+  PRIMARY KEY  (`studentID`)
 );
 
 -- Create database for professors
@@ -20,14 +20,14 @@ USE professor_db;
 
 -- Create table for professors
 CREATE TABLE professors (
-  `id_num` int(30) NOT NULL,
-  `first_name` varchar(45) NOT NULL,
-  `last_name` varchar(45) NOT NULL,
+  `professorsID` int(30) NOT NULL,
+  `firstName` varchar(45) NOT NULL,
+  `lastName` varchar(45) NOT NULL,
   `address` varchar(45) NOT NULL,
   `department` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `password`varchar(45) NOT NULL,
-  PRIMARY KEY  (`id_num`)
+  PRIMARY KEY  (`professorsID`)
 );
 
 -- Create database for faculty
@@ -36,15 +36,14 @@ USE faculty_db;
 
 -- Create table for faculty
 CREATE TABLE faculty (
-  `id_num` int(30) NOT NULL,
-  `first_name` varchar(45) NOT NULL,
-  `last_name` varchar(45) NOT NULL,
+  `facultyID` int(30) NOT NULL,
+  `firstName` varchar(45) NOT NULL,
+  `lastName` varchar(45) NOT NULL,
   `address` varchar(45) NOT NULL,
   `department` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
-  `year` int(30) NOT NULL,
   `password`varchar(45) NOT NULL,
-  PRIMARY KEY  (`id_num`)
+  PRIMARY KEY  (`facultyID`)
 );
 
 
@@ -54,20 +53,20 @@ USE item_db;
 
 -- Create the table for items
 CREATE TABLE items (
-  `id_num` int(30) NOT NULL,
-  `item_name` varchar(45) NOT NULL,
+  `itemID` int(30) NOT NULL,
+  `itemName` varchar(45) NOT NULL,
   `description` varchar(45) NOT NULL,
   `quantity` int(30) NOT NULL,
   `category` varchar(45) NOT NULL,
-  PRIMARY KEY  (`id_num`)
+  PRIMARY KEY  (`itemID`)
 );
 
 CREATE DATABASE admin_db;
 USE admin_db;
 
 CREATE TABLE admin (
-  `id_num` int(30) NOT NULL,
+  `adminID` int(30) NOT NULL,
   `username` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
-  PRIMARY KEY  (`id_num`)
+  PRIMARY KEY  (`adminID`)
 );

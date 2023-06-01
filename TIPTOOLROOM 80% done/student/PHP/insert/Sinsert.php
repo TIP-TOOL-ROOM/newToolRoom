@@ -1,10 +1,11 @@
 <?php
 // Check if the form is submitted
+// if this php is href change the `Submit` to the one that you place on the button
 if (isset($_POST['Submit'])) {
     // Retrieve form data
-    $id_num = $_POST['id_num'];
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
+    $studentID = $_POST['studentID'];
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
     $address = $_POST['address'];
     $program = $_POST['program'];
     $email = $_POST['email'];
@@ -12,12 +13,13 @@ if (isset($_POST['Submit'])) {
     $password = $_POST['password'];
     
     // Include database connection file
-    include_once("C:\Users\johnr\Documents\GitHub\TOOLv.2\TIP_TOOLROON TESTING\thislet\PHP\config.php");
+    // set the correct path of the file example: TIPTOOLROOM 80% done\student\PHP\config.php
+    include_once("config.php");
     
     
     // Insert user data into the student table
-    $studentQuery = "INSERT INTO student (id_num, first_name, last_name, address, program, email, year, password) 
-                     VALUES ('$id_num', '$first_name', '$last_name', '$address', '$program', '$email', '$year', '$password')";
+    $studentQuery = "INSERT INTO student (studentID, firstName, lastName, address, program, email, year, password) 
+                     VALUES ('$studentID', '$firstName', '$lastName', '$address', '$program', '$email', '$year', '$password')";
     
 	$result = $studentConnection->query($studentQuery);
     if ($result === TRUE) {
