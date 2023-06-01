@@ -24,7 +24,7 @@ if (isset($_POST['Submit'])) {
     if ($result === TRUE) {
         echo "Faculty user added successfully.";
     } else {
-        echo "Error adding faculty user: " . $facultyConnection->error;
+        echo "Error adding faculty user.";
     }
     
     // Close the database connection

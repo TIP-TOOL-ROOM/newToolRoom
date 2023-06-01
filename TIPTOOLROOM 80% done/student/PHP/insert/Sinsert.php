@@ -23,7 +23,7 @@ if (isset($_POST['Submit'])) {
     if ($result === TRUE) {
         echo "Student added successfully.";
     } else {
-        echo "Error adding student: " . $studentConnection->error;
+        echo "Error adding student.";
     }
     
     // Close the database connection
