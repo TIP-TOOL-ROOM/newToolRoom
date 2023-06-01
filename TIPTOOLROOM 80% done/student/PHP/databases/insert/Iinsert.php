@@ -12,21 +12,20 @@ if (isset($_POST['Submit'])) {
     $password = $_POST['password'];
     
     // Include database connection file
-    include_once("C:\Users\johnr\Documents\GitHub\TOOLv.2\TIP_TOOLROON TESTING\thislet\PHP\config.php");
-    
+    include_once("config.php");
     
     // Insert user data into the student table
     $studentQuery = "INSERT INTO student (id_num, first_name, last_name, address, program, email, year, password) 
                      VALUES ('$id_num', '$first_name', '$last_name', '$address', '$program', '$email', '$year', '$password')";
     
-	$result = $studentConnection->query($studentQuery);
+    $result = $studentConnection->query($studentQuery);
     if ($result === TRUE) {
         echo "Student added successfully.";
     } else {
         echo "Error adding student: " . $studentConnection->error;
     }
-    
-    // Close the database connection
-    $studentConnection->close();
+
+     // Close the database connection
+     $itemsConnection->close();
 }
 ?>
