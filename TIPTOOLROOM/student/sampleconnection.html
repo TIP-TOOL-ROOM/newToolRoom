@@ -1,0 +1,45 @@
+
+
+<!-- STUDENT POV-->
+<!--from this-->
+
+<div class="info_block">
+    <div class="info_name"><span class="info_label">Name:</span> Juan Dela Cruz</div>
+    <div class="info_student_id"><span class="info_label">Student ID:</span> 123456</div>
+    <div class="info_program"><span class="info_label">Program:</span> Computer Science</div>
+    <div class="info_year"><span class="info_label">Year:</span> 4th Year</div>
+</div>
+
+<!--to this-->
+<!-- create a php file -->
+
+<?php
+    // Include the database connection file
+    include_once("config.php");
+
+    // Fetch student information from the database
+    $query = "SELECT * FROM students WHERE student_id = '$studentId'";
+    $result = mysqli_query($mysqli, $query);
+    $row = mysqli_fetch_assoc($result);
+
+    // Close the database connection
+    mysqli_close($mysqli);
+?>
+
+<!-- ... Rest of the HTML code ... -->
+
+<!-- Inside the HTML code, replace the static student information with the dynamic values from the database -->
+<div class="info_block">
+    <div class="info_name"><span class="info_label">Name:</span> <?php echo $row['firstName'] . ' ' . $row['lastName']; ?></div>
+    <div class="info_student_id"><span class="info_label">Student ID:</span> <?php echo $row['student_id']; ?></div>
+    <div class="info_program"><span class="info_label">Program:</span> <?php echo $row['program']; ?></div>
+    <div class="info_year"><span class="info_label">Year:</span> <?php echo $row['year']; ?></div>
+</div>
+
+<!-- ... Rest of the HTML code ... -->
+
+<!-- HTML code before the PHP code -->
+
+<?php include("student_info.php"); ?>
+
+<!-- HTML code after the PHP code -->
